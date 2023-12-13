@@ -20,6 +20,9 @@ const incorrectAnswers = computed(() => currentQuestion.value?.incorrect_answers
 const options = computed(() =>
   incorrectAnswers.value?.concat(correctAnswer.value).sort(() => Math.random() - 0.5)
 )
+const isCompleted = computed(
+  () => questionIndex.value === questions.value.length && questionIndex.value > 0
+)
 
 const emit = defineEmits(['update:result'])
 
@@ -63,7 +66,7 @@ const checkAnswer = () => {
           : `❌ I'm sorry, you picked the wrong answer. The correct is ${correctAnswer}.`
       }}
     </p>
-    <p v-if="questionIndex === questions.length && isSubmitted" class="mx-auto">
+    <p v-if="isCompleted" class="mx-auto">
       You have completed the quiz. Thank you for participating.
     </p>
     <button
