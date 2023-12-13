@@ -48,6 +48,9 @@ const checkAnswer = () => {
         :key="option"
         :for="`option${key}`"
         class="p-2 border rounded-xl cursor-pointer hover:outline hover:outline-sky-600"
+        :class="{
+          'outline outline-sky-600': option === selectedOption
+        }"
       >
         <input
           v-model="selectedOption"
@@ -72,12 +75,10 @@ const checkAnswer = () => {
     <button
       v-if="questionIndex < questions.length"
       type="button"
-      class="border border-bg-sky-600 hover:bg-sky-600 py-2 px-6 rounded w-64 mx-auto group"
+      class="border border-bg-sky-600 bg-sky-600 py-2 px-6 rounded w-64 mx-auto hover:bg-sky-700 transition-colors"
       @click="isSubmitted ? goNextQuiz() : checkAnswer()"
     >
-      <span class="text-black group-hover:text-white">{{
-        isSubmitted ? 'Next Quiz' : 'Submit'
-      }}</span>
+      <span class="text-black text-white">{{ isSubmitted ? 'Next Quiz' : 'Submit' }}</span>
     </button>
   </div>
 </template>
