@@ -1,35 +1,20 @@
-# vue3-quiz-game
+# 專案名稱：Quiz Game Project
 
-This template should help get you started developing with Vue 3 in Vite.
+## 作品連結
 
-## Recommended IDE Setup
+- GitHub Repo: https://github.com/samchiu064/vue3-quiz-game
+- GitHub Page: https://samchiu064.github.io/vue3-quiz-game/
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 技術要求
 
-## Customize configuration
+- 使用 Vue 3 Composition API
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## 開發資訊
 
-## Project Setup
+- API 網址：https://opentdb.com/
 
-```sh
-npm install
-```
+## 專案需求
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- 畫面上需要顯示分數比較、問題及選項、回答結果、送出按鈕 四個部分
+- 當回答結果錯誤，畫面上顯示回答錯誤提示，並更新分數統計
+- 當回答結果正確，畫面上顯示回答正確提示，並更新分數統計
